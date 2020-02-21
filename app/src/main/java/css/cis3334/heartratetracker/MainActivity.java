@@ -8,12 +8,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.Collections;
+import java.util.Comparator;
+
 public class MainActivity extends AppCompatActivity {
 
     HeartRateList heartRateList;        // The list of heart rate objects
     ArrayAdapter<HeartRate> hrAdapter;  // The custom array adapter for displaying the heart rates in the list view
     ListView lvHeartRates;              // The list view for the heart rates from the activity_mail.xml file
     TextView tvSelect;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
         heartRateList = new HeartRateList();
         heartRateList.InitRandomElderly();
+
+
 
         hrAdapter = new HeartRateAdapter(this, R.layout.heart_rate_row, R.id.textViewPulse, heartRateList);
         hrAdapter.setDropDownViewResource(R.layout.heart_rate_row);

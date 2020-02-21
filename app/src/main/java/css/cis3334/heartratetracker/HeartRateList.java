@@ -1,6 +1,8 @@
 package css.cis3334.heartratetracker;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
@@ -38,8 +40,19 @@ public class HeartRateList {
         Random randGenerator = new Random();
         for (int i=0; i<20; i++) {
             heartRateList.add(new HeartRate( randGenerator.nextInt(150-80) + 80, 50));
+
+
         }
+        Collections.sort(heartRateList, new Comparator<HeartRate>() {
+            @Override
+            public int compare(HeartRate lhs, HeartRate rhs) {
+                return lhs.getPulse().compareTo(rhs.getPulse());
+            }
+        });
+
+
     }
+
 
     /**
      * Provides direct acces to the entire arralist of heart rates
