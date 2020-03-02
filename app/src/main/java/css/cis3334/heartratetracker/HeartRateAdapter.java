@@ -45,10 +45,10 @@ public class HeartRateAdapter extends ArrayAdapter<HeartRate> {
         //get the heart rate we are displaying
         HeartRate hr = hrList.getHeartRate(position);
 
-        TextView tvPulse=(TextView)view.findViewById(R.id.textViewPulse);
+        TextView tvPulse=(TextView)view.findViewById(R.id.textViewPulseDetail);
         tvPulse.setText(hr.getPulse().toString());
 
-        TextView tvRange =(TextView) view.findViewById(R.id.textViewRange);
+        TextView tvRange =(TextView) view.findViewById(R.id.textViewRangeDetail);
         tvRange.setText(hr.getRangeName());
 
         TextView tvDescription =(TextView) view.findViewById(R.id.textViewDescription);

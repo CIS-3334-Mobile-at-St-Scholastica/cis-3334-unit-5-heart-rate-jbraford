@@ -23,7 +23,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewPulse"
+            android:id="@+id/textViewPulseDetail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -52,7 +52,7 @@
             android:visibility="visible" />
 
         <TextView
-            android:id="@+id/textViewRange"
+            android:id="@+id/textViewRangeDetail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
